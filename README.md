@@ -2,7 +2,8 @@ Test env
 --------
 
 ```bash
-conda create -n bsgui --clone /reg/g/pcds/pyps/conda/py36/envs/pcds-4.1.2/
+conda env create -n bsgui -f /reg/g/pcds/pyps/conda/pcds-envs/envs/pcds/env.yaml
+# or perhaps conda create -n bsgui --clone /reg/g/pcds/pyps/conda/py36/envs/pcds-4.1.2/
 conda install -n bsgui bluesky bluesky-live ophyd qtpy
 
 conda activate bsgui
@@ -19,7 +20,7 @@ Per @ZLLentz
 3. cd to profile
 4. `qserver-list-plans-devices --startup-dir .`
 5. create `user_group_permissions.yaml` to specify what to exclude
-6. start-re-manager --startup-dir .
+6. `start-re-manager --startup-dir .`
 
 Redis (development)
 -------------------
@@ -31,3 +32,14 @@ Missing deps
 ------------
 
 qtpy
+
+
+Notes
+-----
+
+Per Dmitri:
+
+> By default, RE manager is deleting the instance of Run Engine created in
+> startup files and replacing it with a new instance, so you lose all the
+> subscriptions. This behavior can be turned off by starting RE Manager with
+> --keep-re parameter: start-re-manager --keep-re.

@@ -7,18 +7,9 @@
 [submodule "bluesky"]
 	path = bluesky
 	url = https://github.com/bluesky/bluesky
-[submodule "ophyd"]
-	path = ophyd
-	url = https://github.com/bluesky/ophyd
 [submodule "bluesky-queueserver"]
 	path = bluesky-queueserver
 	url = https://github.com/bluesky/bluesky-queueserver
 [submodule "hutch-python"]
 	path = hutch-python
 	url = https://github.com/pcdshub/hutch-python
-[submodule "pcdsdevices"]
-	path = pcdsdevices
-	url = https://github.com/pcdshub/pcdsdevices
-[submodule "archapp"]
-	path = archapp
-	url = https://github.com/pcdshub/archapp
