@@ -11,3 +11,5 @@ for submodule in $submodules; do
 done
 
 set +x
+
+conda install qtpy

@@ -9,3 +9,8 @@ Redis (development)
 
 Start ``/reg/g/pcds/pyps/apps/redis/6.2.1/bin/redis-server``
 
+
+Missing deps
+------------
+
+qtpy
