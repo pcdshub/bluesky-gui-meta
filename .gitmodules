@@ -1,0 +1,15 @@
+[submodule "bluesky-widgets-demo"]
+	path = bluesky-widgets-demo
+	url = https://github.com/NSLS-II/bluesky-widgets-demo
+[submodule "bluesky-widgets"]
+	path = bluesky-widgets
+	url = https://github.com/bluesky/bluesky-widgets
+[submodule "bluesky"]
+	path = bluesky
+	url = https://github.com/bluesky/bluesky
+[submodule "ophyd"]
+	path = ophyd
+	url = https://github.com/bluesky/ophyd
+[submodule "bluesky-queueserver"]
+	path = bluesky-queueserver
+	url = https://github.com/bluesky/bluesky-queueserver
