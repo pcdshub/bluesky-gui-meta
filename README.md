@@ -10,6 +10,12 @@ conda activate bsgui
 source install_submodules.sh
 ```
 
+Redis (development)
+-------------------
+
+Start ``/reg/g/pcds/pyps/apps/redis/6.2.1/bin/redis-server``
+
+
 Environment
 -----------
 
@@ -22,16 +28,37 @@ Per @ZLLentz
 5. create `user_group_permissions.yaml` to specify what to exclude
 6. `start-re-manager --startup-dir .`
 
-Redis (development)
--------------------
 
-Start ``/reg/g/pcds/pyps/apps/redis/6.2.1/bin/redis-server``
+Initializing the environment
+----------------------------
 
+```bash
+$ cd startup
+$ bash initialize.sh
+# -> generates existing_plans_and_devices.yaml
+
+# Run the queue server with 00-hutch_python.py,
+# existing_plans_and_devices.yaml, and user_group_permissions.yaml in place
+$ bash run.sh
+
+# In a separate terminal,
+# RE(count()) to fill the database with something
+$ bash run_count.sh
+```
+
+Then start up ``bluesky-widgets-demo``
+
+If you're like me, you may have to work around a weird caching issue:
+```
+rm -rf ~/.cache/scikit-image/ && bluesky-widgets-demo
+```
 
 Missing deps
 ------------
 
-qtpy
+Not sure why no libraries required it:
+
+* qtpy
 
 
 Notes
